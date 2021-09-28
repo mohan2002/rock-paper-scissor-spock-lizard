@@ -15,8 +15,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 .hero{
@@ -300,19 +298,6 @@ body{
     align-items: center;
 }
 
-.dis{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.dis h1{
-    font-size: 1rem;
-    color: white;
-}
-
 
 .first{
     position: absolute;
@@ -559,11 +544,6 @@ body{
         top: 240px;
         left: 180px;
     }
-    .icons{
-        margin-left: 30px;
-    }
-    .footer{
-        margin-top: 100px;
-        margin-left: 50px;
-    }
+   
 }
+
