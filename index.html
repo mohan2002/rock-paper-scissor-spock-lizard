@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Styles/styles.css">
+  <script src="./Scripts/script.js" defer></script>
+</head>
+
+<body>
+
+
+  <div class="hero">
+
+    <!-- header part -->
+    <div class="header">
+      <div class="score">
+          <div class="header-content" id="three-top-one">
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSORS</li>
+          </div>
+          <div class="header-content-five hide" id="five-top-one">
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSORS</li>
+            <li>SPOCK</li>
+            <li>LIZARD</li>
+          </div>
+          <div class="score-box">
+            <div>
+              <li>SCORE</li>
+              <li id="points">0</li>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Main logic -->
+    <div id="three" class="middle">
+
+      <!-- Starting -->
+      <div id="start" >
+        <div class="icons">
+          <div class="paper">
+            <img src="./images/Paper.png" class="paper-img" id="paper" onclick="Game(this)"></img>
+          </div>
+          <div class="rock" >
+            <img src="./images/Rock.png" class="rock-img" alt="" id="rock" onclick="Game(this)">
+          </div>
+          <div class="scissors" >
+            <img src="./images/Scissors.png" class="scissors-img" alt="" id="scissors" onclick="Game(this)">
+          </div>
+
+        </div>
+      </div>
+      
+
+    <!-- Multiplayer div -->
+
+    <!-- After Game start -->
+    <div class="hide" id="after">
+        <div class="after-start">
+          <div class="t1">
+            <h1>You Picked</h1>
+            <h1>The House picked</h1>
+          </div>
+          <div class="two-player">
+              <!-- Human choice -->
+              <div class="one">
+                <div id="human1" >
+                  <div id="human2">
+                    <div  id="human3">
+                      <div class="paper-af" id="human" onclick="Game(this)">
+                    </div>
+                  </div>
+                </div>                
+                </div>
+              </div>
+
+             
+              <!-- Message -->
+
+              <div class="message">
+                <h1 id="res">YOU WIN</h1>
+                <button class="btn" onclick="restart()">PLAY AGAIN</button>
+              </div>
+
+              <!-- Bot choice -->
+              <div class="one">
+                  <div id="bot1">
+                    <div id="bot2">
+                      <div id="bot3"> 
+                        <div class="paper-af" id="bot" onclick="Game(this)">
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+          </div> 
+     </div>
+      
+    </div>
+    
+
+
+
+  </div>
+
+
+
+  <div id="five" class="middle hide">
+      <div id="5-start" class="five-level">
+        <div class="five-before">
+
+          <div class="bluejn">
+            <img src="./images/Paper.png" id="paper" class="five-paper" onclick="fivegame(this)"></img>
+          </div>
+
+          <div>
+            <img src="./images/Rock.png" alt="" id="rock" class="five-rock" onclick="fivegame(this)">
+
+          </div>
+
+          <div>
+            <img src="./images/Scissors.png" alt="" id="scissors" class="five-scissors" onclick="fivegame(this)">
+          </div>
+
+
+          <div>
+            <img src="./images/spock.png" alt="" id="spock" class="five-spock" onclick="fivegame(this)">
+          </div>
+
+
+          <div>
+            <img src="./images/lizard.png" alt="" id="lizard" class="five-lizard" onclick="fivegame(this)">
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="hide" id="5-after">
+        <div class="after-start">
+          <div class="t1">
+            <h1>You Picked</h1>
+            <h1>The House picked</h1>
+          </div>
+          <div class="two-player-five">
+              <!-- Human choice -->
+              <div class="one-five">
+                <div id="human1-five" >
+                  <div id="human2-five">
+                    <div  id="human3-five">
+                      <div class="paper-af-five" id="human-five" onclick="Game(this)">
+                    </div>
+                  </div>
+                </div>                
+                </div>
+              </div>
+
+             
+              <!-- Message -->
+
+              <div class="message-five">
+                <h1 id="res-five">YOU WIN</h1>
+                <button class="btn-five" onclick="restartfive()">PLAY AGAIN</button>
+              </div>
+
+              <!-- Bot choice -->
+              <div class="one-five">
+                  <div id="bot1-five">
+                    <div id="bot2-five">
+                      <div id="bot3-five"> 
+                        <div class="paper-af-five" id="bot-five" onclick="Game(this)">
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+          </div> 
+     </div>
+      
+    </div>
+    
+
+  </div>
+  
+    <!-- Footer part -->
+    <div class="footer">
+      <div class="toggle dis">
+          <div class="toggle-btn" id="click">
+            <div class="inner-circle"></div>
+          </div>
+          <h1>CHANGE GAME</h1>
+      </div>
+
+
+      <p class="rules">
+        Rules
+      </p>
+    </div>
+
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>
+
+
